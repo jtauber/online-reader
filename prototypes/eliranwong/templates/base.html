@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="nestle1904.css">
   </head>
   <body>
+    {% block chapter_nav %}
     <b><a href="nestle1904.html">{{ book_name }} </a></b>
     {% for i in range(1, chapter_count + 1) %}
       {% if i == chapter -%}
@@ -20,6 +21,7 @@
       {%- endif %}
       {%- if not loop.last %} | {% endif -%}
     {% endfor %}
+    {% endblock %}
     <hr>
     {% for verse, rows in verses %}
       <vid id="v{{ book_code }}.{{ chapter }}.{{ verse }}">{{ verse }}</vid>
@@ -30,14 +32,6 @@
       <br>
     {% endfor %}
     <hr>
-    <b><a href="nestle1904.html">{{ book_name }} </a></b>
-    {% for i in range(1, chapter_count + 1) %}
-      {% if i == chapter -%}
-        <b>{{ i }}</b>
-      {%- else -%}
-        <a href="{{ book_code }}_{{ i }}.html">{{ i }}</a>
-      {%- endif %}
-      {%- if not loop.last %} | {% endif -%}
-    {% endfor %}
+    {{ self.chapter_nav() }}
   </body>
 </html>
