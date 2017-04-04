@@ -1,0 +1,197 @@
+body {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 130%;
+}
+
+.tt1 {
+    position: relative;
+    display: inline-block;
+}
+
+.tt1 .tt2 {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tt1 .tt2::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tt1:hover {
+	visibility: visible;
+	background-color: powderblue;
+}
+
+.tt1:hover .tt2 {
+    visibility: visible;
+}
+
+vid {
+color: brown;
+vertical-align: super;
+font-size: 70%;
+}
+
+code {
+color: green;
+vertical-align: super;
+font-size: 70%;
+}
+
+gloss {
+color: red;
+}
+
+trans {
+color: #4f81b1;
+font-style: italic;
+vertical-align: super;
+}
+
+heb {
+font-family: 'Ezra SIL SR';
+font-size: 130%;
+}
+
+/* unvisited link */
+a:link {
+    color: green;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: green;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: green;
+    text-decoration: none;
+}
+
+/* unvisited link */
+a.v:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+a.v:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a.v:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* selected link */
+a.v:active {
+    color: white;
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+	padding-left: 10px;
+    border: 1px solid black;
+}
+
+f {
+color: #4f81b1;
+vertical-align: super;
+font-size: 70%;
+}
+
+i {
+color: #4f81b1;
+}
+
+vb {
+color: red;
+}
+
+pn {
+color: teal;
+}
+
+lin {
+font-style: italic;
+}
+
+qere {
+font-style: italic;
+}
+
+
+
+.tt3 {
+    position: relative;
+    display: inline-block;
+}
+
+.tt3 .tt4 {
+    visibility: hidden;
+    width: 40vw;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 200%;
+}
+
+.tt3 .tt4::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+.tt3:hover .tt4 {
+    visibility: visible;
+}
+
+div.int {
+display:inline-block;
+vertical-align:top;
+text-align: center;
+}

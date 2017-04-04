@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="ew.js"></script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Eliran Wong">
+    <meta name="keywords" content="Jesus,eliranwong,Eliran,Wong,bible,scripture,testament,Hebrew,Greek,LXX,Septuagint,BHS,Berean,interlinear,morphology,lexeme,biblical">
+    <meta name="author" content="Eliran Wong">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliran Wong</title>
+    <link rel="stylesheet" type="text/css" href="nestle1904.css">
+  </head>
+  <body>
+    <b><a href="nestle1904.html">{{ book_name }} </a></b>
+    {% for i in range(1, chapter_count + 1) %}
+      {% if i == chapter -%}
+        <b>{{ i }}</b>
+      {%- else -%}
+        <a href="{{ book_code }}_{{ i }}.html">{{ i }}</a>
+      {%- endif %}
+      {%- if not loop.last %}|{% endif -%}
+    {% endfor %}
+    <hr>
+    {% for verse, rows in verses %}
+      <vid id="v{{ book_code }}.{{ chapter }}.{{ verse }}">{{ verse }}</vid>
+      <script>document.getElementById("v{{ book_code }}.{{ chapter }}.{{ verse }}").innerHTML = verse2({{ book_code }}, {{ chapter }}, {{ verse }});</script>
+      {% for row in rows -%}
+        <div class="tt1" onclick=""><grk>{{ row.text }}</grk></div>
+      {% endfor %}
+      <br>
+    {% endfor %}
+    <hr>
+    <b><a href="nestle1904.html">{{ book_name }} </a></b>
+    {% for i in range(1, chapter_count + 1) %}
+      {% if i == chapter %}
+        <b>{{ i }}</b>
+      {% else %}
+        <a href="{{ book_code }}_{{ chapter }}.html">{{ i }}</a>
+      {% endif %}
+      {% if not loop.last %}|{% endif %}
+    {% endfor %}
+  </body>
+</html>
