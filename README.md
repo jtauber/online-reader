@@ -1,3 +1,5 @@
+**NOTE**: The vue.js-based online reading environment has been broken off as [deep-reader](https://github.com/deep-reader/deep-reader). Early prototypes as well as static-generation code remain here.
+
 # online-reader
 
 At the moment, this is mostly an attempt to generalise one-off prototypes of Greek New Testament reading environments I've previously built over the last 11 years or so into code for generating those prototypes with arbitrary text (appropriately annotated).
